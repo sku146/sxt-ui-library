@@ -1,0 +1,40 @@
+{
+  "roots": [
+    "specs/"
+  ],
+  "verbose": true,
+  "collectCoverage": true,
+  "coverageDirectory": "dashboard/unit-testing",
+  "coverageReporters": [
+    "json",
+    "lcov",
+    "text",
+    "text-summary"
+  ],
+  "collectCoverageFrom": [
+    "src/**",
+    "!**/index.js"
+  ],
+  "coveragePathIgnorePatterns": [
+    "/lib/",
+    "/build/"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  },
+  "moduleFileExtensions": [
+    "js",
+    "jsx"
+  ],
+  "moduleNameMapper": {
+    "^src(.*)$": "<rootDir>/src$1"
+  },
+  "snapshotSerializers": [
+    "<rootDir>/node_modules/enzyme-to-json/serializer"
+  ]
+}

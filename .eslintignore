@@ -1,0 +1,9 @@
+/coverage/**
+/docs/**
+/jsdoc/**
+/tmp/**
+/dist/**
+/dist-release/**
+/dashboard/**
+lib-themes/**
+build/es5/**

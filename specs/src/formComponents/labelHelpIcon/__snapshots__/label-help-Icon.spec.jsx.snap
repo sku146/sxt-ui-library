@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelHelpIcon component should render as expected 1`] = `
+<div
+  className="label-help-icon"
+>
+  <label
+    className="css-label"
+    data-bdd-selector="test label nameLabel"
+    htmlFor="test label name"
+  >
+    label text
+  </label>
+  <div>
+    Children test
+  </div>
+</div>
+`;
+
+exports[`LabelHelpIcon component should render as expected with helpContent 1`] = `
+<div
+  className="label-help-icon"
+>
+  <label
+    className="css-label"
+    data-bdd-selector="test label nameLabel"
+    htmlFor="test label name"
+  >
+    label text
+  </label>
+  <i
+    aria-hidden="true"
+    className="help circle outline icon"
+    data-bdd-selector="test label nameHelpIcon"
+  />
+  <div>
+    Children test
+  </div>
+</div>
+`;

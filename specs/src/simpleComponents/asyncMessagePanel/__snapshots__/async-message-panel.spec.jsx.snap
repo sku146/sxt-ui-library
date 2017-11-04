@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Async Message Panel component should render as expected 1`] = `
+<div
+  className="ui pointing basic label message-error position-left"
+  data-bdd-selector="testAsyncMessagePanelErrorMsg"
+  onClick={[Function]}
+>
+  <div
+    className="ui active transition visible inverted dimmer"
+    onClick={[Function]}
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="center"
+      >
+        <div
+          className="ui inverted loader"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    test
+  </div>
+</div>
+`;
+
+exports[`Async Message Panel component should render as expected with isRequested FALSE 1`] = `
+<div
+  className="ui pointing basic label message-error position-left"
+  data-bdd-selector="testAsyncMessagePanelErrorMsg"
+  onClick={[Function]}
+>
+  <div
+    className="ui inverted dimmer"
+    onClick={[Function]}
+  >
+    <div
+      className="content"
+    >
+      <div
+        className="center"
+      >
+        <div
+          className="ui inverted loader"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    test
+  </div>
+</div>
+`;

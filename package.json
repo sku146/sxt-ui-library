@@ -1,0 +1,85 @@
+{
+  "name": "sxt-ui-library",
+  "version": "1.0.0",
+  "description": "Sapient XT React UI Library with Semantic React Components",
+  "main": "index.js",
+  "keywords": [
+    "React",
+    "Redux",
+    "Sapient",
+    "XT",
+    "UI",
+    "Library",
+    "Semantic",
+    "React",
+    "Components"
+  ],
+  "scripts": {
+    "compile": "rimraf ./build/es5 && cross-env NODE_ENV=compile babel build --out-dir build/es5 -s",
+    "themes": "rimraf ./lib && cross-env NODE_ENV=theme webpack --config build/es5/webpack.config.js",
+    "cleanSource": "rimraf ./formComponents ./reduxFormComponents ./simpleComponents",
+    "source": "npm run cleanSource && cross-env NODE_ENV=build babel src --out-dir ./",
+    "build": "npm run compile && npm run themes && npm run source",
+    "build:lint": "eslint build/ -f table --fix",
+    "source:lint": "eslint 'src/**/*{.js,.jsx}' -f table --fix",
+    "style:lint": "stylelint 'lib-themes/**/*.less' --custom-formatter=node_modules/stylelint-formatter-table",
+    "spec:lint": "eslint -c specs/.eslintrc 'specs/**/*.spec{.js,.jsx}' -f table --fix --no-eslintrc",
+    "lint": "npm run build:lint && npm run source:lint && npm run spec:lint && npm run style:lint",
+    "test:unit": "jest --config=jest.config.json",
+    "test:watch": "jest --config=jest.config.json --watch",
+    "test:watchAll": "jest --config=jest.config.json --watchAll",
+    "check": "npm-check -u",
+    "test": "npm run lint && npm run test:unit && npm run build",
+    "prepublish": "npm run test"
+  },
+  "precommit": [
+    "test"
+  ],
+  "author": {
+    "name": "SKU146",
+    "email": "skumar146@sapient.com"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "semantic-ui-less": "^2.2.12",
+    "semantic-ui-react": "^0.75.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-build-engine": "^1.0.1",
+    "chalk": "^2.1.0",
+    "copy-webpack-plugin": "^4.2.0",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "less-plugin-rewrite-import": "^0.1.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^2.0.1",
+    "eslint-config-build-engine": "^1.0.3",
+    "file-loader": "^1.1.5",
+    "jest": "^21.2.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "npm-check": "^5.4.5",
+    "pre-commit": "^1.2.2",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.6.2",
+    "style-loader": "^0.19.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-formatter-table": "^1.0.3",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.7.1"
+  }
+}

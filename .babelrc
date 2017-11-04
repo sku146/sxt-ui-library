@@ -1,0 +1,24 @@
+{
+  "env": {
+    "compile": {
+      "presets": ["build-engine"]
+    },
+    "build": {
+      "presets": ["build-engine/react"]
+    },
+    "theme": {
+      "presets": ["build-engine/webpack"]
+    },
+    "test": {
+      "presets": ["build-engine/react"]
+    }
+  },
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "^src(.*)$": "<rootDir>/src$1"
+      }
+    }]
+  ]
+}

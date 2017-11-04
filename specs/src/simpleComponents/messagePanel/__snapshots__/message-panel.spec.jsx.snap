@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message Panel component should render as expected 1`] = `
+<div
+  className="ui pointing basic label message-error position-left"
+  data-bdd-selector="testMessagePanelErrorMsg"
+  onClick={[Function]}
+>
+  <div>
+    test
+  </div>
+</div>
+`;

@@ -1,0 +1,19 @@
+### sxt-ui-library ###
+tmp/
+lib/
+coverage/
+dist/
+ist/
+jest/
+jest_0/
+jest_ykmxi4/
+dist-release/
+dashboard/**
+/formComponents/
+/reduxFormComponents/
+/simpleComponents/
+*.properties
+!sonar-project.properties
+*.map
+build/es5
+node_modules/

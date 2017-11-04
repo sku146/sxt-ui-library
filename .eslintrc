@@ -1,0 +1,18 @@
+{
+  "extends":[
+    "build-engine",
+    "build-engine/react",
+    "build-engine/lodash",
+    "build-engine/webpack"
+  ],
+  "rules": {
+    "react/forbid-prop-types": 0,
+    "jsx-a11y/label-has-for": [ 2, {
+      "components": [ "label" ],
+      "required": {
+        "some": [ "nesting", "id" ]
+      },
+      "allowChildren": false
+    }]
+  }
+}

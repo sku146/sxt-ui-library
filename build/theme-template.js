@@ -14,7 +14,7 @@ export default ({
   themePoint,
   themeVariables,
   name,
-  }) => ({
+}) => ({
   entry: entryPoint,
   output: {
     path: sysPath.resolve(`${process.cwd()}`, `${outputPoint}/${name}`),
